@@ -1,0 +1,161 @@
+@keyframes cat {
+    0% {
+        left: 20%; top: 50%;
+        transform: rotate(25deg) scale(0.3);
+    }
+    40% {
+        left: 5%; top: 30%;
+        transform: rotate(10deg) scale(0.4);
+    }
+    100% {
+        left: 0; top: 20%;
+        transform: rotate(-30deg) scale(1.0);
+    }
+}
+
+/* 눈 */
+
+@keyframes eyeLeftMoving {
+    0% {
+        transform: translate(0,0) scale(1.0);
+    }
+    20%{
+        transform: translate(0,0) scale(1.0);
+    }
+    100% {
+        transform: translate(-70px, 100px) scale(5.0);
+        }
+}
+
+@keyframes eyeRightMoving {
+    0% {
+        transform: translate(0,0) scale(1.0);
+    }
+    20%{
+        transform: translate(0,0) scale(1.0);
+    }
+    100% {
+        transform: translate(70px, 100px) scale(5.0);
+        }
+}
+
+@keyframes sparkle {
+    0% {
+        opacity: 0%;
+    }
+    60%{
+        opacity: 0%;
+    }
+    90%{
+        opacity: 100%;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 100%;
+        transform: scale(1.7);
+        }
+}
+
+/* 눈썹 */
+
+@keyframes eyebrowLeft {
+    0% {
+        transform: translate(0,0) rotate(20deg) scale(1.0);
+    }
+    20%{
+        transform: translate(0,0) rotate(20deg) scale(1.0);
+    }
+    100% {
+        transform: translate(-50px, 50px) rotate(35deg) scale(2,1);
+        }
+}
+
+@keyframes eyebrowRight {
+    0% {
+        transform: translate(0,0) rotate(-20deg) scale(1.0);
+    }
+    20%{
+        transform: translate(0,0) rotate(-20deg) scale(1.0);
+    }
+    100% {
+        transform: translate(50px, 50px) rotate(-35deg) scale(2,1);
+        }
+}
+
+/* 코와 입 */
+
+@keyframes JudungMoving {
+    0% {
+        transform: translateX(-50%) scale(1.0);
+    }
+    20%{
+        transform: translateX(-50%) scale(1.0);
+    }
+    100% {
+        transform: translate(-50px, 150px) scale(1.4,1.2);
+        }
+}
+
+@keyframes MouthMoving {
+    0% {
+        transform-origin: 50% 0;
+        transform: scale(0);
+    }
+    60%{
+        transform-origin: 50% 0;
+        transform: scale(0);
+    }
+    100% {
+        transform-origin: 50% 0;
+        transform: scale(1,1.4);
+        }
+}
+
+/* 뺨 */
+
+@keyframes Cheek {
+    0% {
+        opacity: 0%;
+    }
+    70%{
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+        }
+}
+
+/* 귀 */
+
+@keyframes earLeftMoving {
+    0% {
+        transform: rotate(-80deg);
+    }
+    5% {
+        transform: rotate(-65deg);
+    }
+    10% {
+        transform: rotate(-80deg);
+    }
+    100% {
+        transform: translate(20%,-100%) rotate(0deg) scale(1.3);
+        }
+        
+}
+
+
+
+@keyframes earRightMoving {
+    0% {
+        transform: rotate(170deg);
+    }
+    5% {
+        transform: rotate(155deg);
+    }
+    10% {
+        transform: rotate(170deg);
+    }
+    100% {
+        transform: translate(-20%,-100%) rotate(90deg) scale(1.3);
+        }
+}

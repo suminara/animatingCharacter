@@ -1,0 +1,221 @@
+:root {
+    --fur: #e6ded7;
+    --darkfur: #9a826d;
+    --line: #765b43;
+    --eye: #382b1f;
+    --blush: #e39073;
+    --sparkle: #fedc30;
+    --ear: #f0bba2;
+    --shadow :rgb(154, 130, 109, 0.5);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #D9AFD9;
+background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+
+    background-size: cover;
+}
+
+.wrap {
+    width: 70vw;
+    height: 70vh;
+    margin: auto;
+}
+
+.cat {
+    animation: cat 2s cubic-bezier(.69,.16,.39,.9) infinite alternate;
+    position: relative;
+    left: 30%;
+}
+
+/* 얼굴 */
+.face {
+    width: 480px; height: 400px;
+    background-color: var(--fur);
+    border: 10px solid var(--line);
+    border-radius: 50%;
+    box-shadow: inset -4em -3em 1em var(--shadow);
+
+    position: absolute;
+    left: 60px;
+}
+
+/* 눈 */
+
+.eye {
+    position: relative;
+    z-index: 60;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: var(--eye);
+    top: 18%;
+}
+
+.eye.left {
+    animation: eyeLeftMoving 2s infinite alternate;
+    position: absolute;
+    left: 35%;
+}
+.eye.right {
+    animation: eyeRightMoving 2s infinite alternate;
+    position: absolute;
+    right: 35%;
+}
+
+/* 반짝 */
+
+.sparkle {
+    animation: sparkle 2s infinite alternate;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--sparkle);
+    clip-path: polygon(50% 0%, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0 50%, 40% 40%);
+}
+
+
+/* 눈썹 */
+
+.eyebrow {
+    position: relative;
+    width: 30px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    top: 12%;
+    border: 3px solid var(--eye);
+}
+
+.eyebrow.left {
+    animation: eyebrowLeft 2s infinite alternate;
+    position: absolute;
+    left: 35%;
+}
+.eyebrow.right{
+    animation: eyebrowRight 2s infinite alternate;
+    position: absolute;
+    right: 35%;
+}
+
+/* 코와 입 */
+.judung {
+    animation: JudungMoving 2s infinite alternate;
+    position: relative;
+    width: 100px; height: 90px;
+    background-color: transparent;
+    top:22%;
+    left:50%;
+}
+
+.nose {
+    position: absolute;
+    z-index: 100;
+    width: 40px; height: 30px;
+    background-color: var(--eye);
+    border-radius: 50% 50% 50% 50% / 25% 25% 75% 75%;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.lip-left {
+    position: absolute;
+    width: 50px; height: 25px;
+    background: var(--fur);
+    border: 5px solid var(--line);
+    
+    border-width: 0 5px 5px 0px;
+    box-sizing: border-box;
+    border-radius: 0 0 50px 50px;
+    top:32%;
+    z-index: 100;
+}
+.lip-right {
+    position: absolute;
+    width: 50px; height: 25px;
+    background: var(--fur);
+    border: 5px solid var(--line);
+    border-width: 0 0px 5px 5px;
+    box-sizing: border-box;
+    border-radius: 0 0 50px 50px;
+    top:32%;
+    left: 50%;
+    z-index: 100;
+}
+
+.mouth{
+    animation: MouthMoving 2s infinite alternate;
+    position: absolute;
+    z-index: 90;
+    width: 70px; height: 100px;
+background: linear-gradient(180deg, rgba(134,41,5,1) 27%, #bc5e38 94%);
+    border-radius: 50% 50% 50% 50% / 0% 0% 100% 100%;
+    border: 5px solid var(--line);
+    box-sizing: border-box;
+    top: 31px; left:-15px;
+}
+
+/* 뺨 */
+
+.cheek {
+    animation: Cheek 2s infinite alternate;
+    position: relative;
+    z-index: 50;
+	width: 150px; height: 120px;
+	background: var(--blush);
+        background: repeating-linear-gradient(-45deg, var(--ear), var(--ear) 10px, var(--blush) 0, var(--blush) 20px);
+    border-radius: 50%;
+    top:60%
+}
+
+.cheek.left {
+    position: absolute;
+    left:3%
+}
+.cheek.right {
+    position: absolute;
+    right:3%;
+}
+
+/* 귀 */
+
+.ear {
+    width: 200px; height: 200px;
+    background-color: var(--fur);
+    background: linear-gradient(145deg, rgba(154,130,109,1) 0%, rgba(230,222,215,1) 60%);
+    border: 10px solid var(--line);
+    border-radius: 15% 85% 75% 25% / 15% 25% 75% 85% ;
+    position: absolute;
+}
+
+.ear.left {
+    animation: earLeftMoving 2s cubic-bezier(.65,.43,.31,.96) infinite alternate;
+    transform: rotate(-80deg);
+    top: 200px;
+}
+.ear.right {
+    animation: earRightMoving 2s cubic-bezier(.65,.43,.31,.96) infinite alternate;
+    top: 200px;
+    left: 400px;
+}
+
+.ear-in-left {
+    position: absolute;
+    width: 140px; height: 140px;
+    background-color: var(--ear);
+    border: 5px solid var(--blush);
+    box-shadow: inset -5em -1em 1em var(--blush);
+    border-radius: 15% 85% 60% 40% / 15% 40% 60% 85%  ;
+    left: 10%; TOP:10% 
+
+}
+
+.ear-in-right {
+    position: absolute;
+    width: 140px; height: 140px;
+    background-color: var(--ear);
+    border: 5px solid var(--blush);
+    box-shadow: inset -1em -5em 1em var(--blush);
+    border-radius: 15% 85% 60% 40% / 15% 40% 60% 85%  ;
+    left: 10%; TOP:10% 
+}
